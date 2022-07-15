@@ -165,154 +165,279 @@
 
           <!--desktop filters-->
 
-          <div x-data="{show:false}" class="mb-5">
-            <div class="text-orange-400 text-xl mb-5 font-bold">فیلتر</div>
-            <div
-              @click="show=!show"
-              class="flex justify-between items-center w-full p-2 cursor-pointer"
-            >
-              <div class="flex justify-center items-center">
-                <div class="flex w-5 h-5 bg-gray-200 rounded-full relative">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5 stroke-slate-800 absolute -bottom-1.5 -left-1"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"
-                    />
-                  </svg>
-                </div>
-                <span class="mr-3 text-slate-800 text-lg">برند محصول</span>
-              </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                :class="show?'rotate-180':''"
-                class="h-4 w-4 stroke-slate-700"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </div>
-
-            <ul x-show="show===true">
-              <li>
-                <input
-                  type="checkbox"
-                  class="'checked'? 'text-orange-500':''"
-                  name="apple"
-                  id="apple"
-                />
-                <label class="mr-2 text-slate-800" for="apple">اپل</label>
-              </li>
-              <li>
-                <input type="checkbox" name="samsung" id="samsung" />
-                <label class="mr-2 text-slate-800" for="samsung">سامسونگ</label>
-              </li>
-              <li>
-                <input type="checkbox" name="xiaomi" id="xiaomi" />
-                <label class="mr-2 text-slate-800" for="xiaomi">شیائومی</label>
-              </li>
-              <li>
-                <input type="checkbox" name="huawei" id="huawei" />
-                <label class="mr-2 text-slate-800" for="huawei">هواوی</label>
-              </li>
-            </ul>
-          </div>
-
-          <!-- colors-->
-          
           <div class="mb-5">
-            <div
-            @click="show=!show"
-              class="flex justify-between items-center w-full mb-4 cursor-pointer"
-            >
-              <div class="flex justify-center items-center">
-                <div class="flex w-5 h-5 bg-gray-200 rounded-full relative">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5 stroke-slate-800 absolute -bottom-1.5 -left-1"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
-                    />
-                  </svg>
-                </div>
-                <span class="mr-3 text-slate-800 text-lg">رنگ محصول</span>
-              </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                :class="show?'rotate-180':''"
-                class="h-4 w-4 stroke-slate-800"
-                viewBox="0 0 20 20"
-                fill="currentColor"
+            <div class="text-orange-400 text-xl mb-5 font-bold">فیلتر</div>
+            <!--ACC No. 1-->
+            <div x-data="{isOpenBrand:true}">
+              <!--ACC #1 header-->
+              <div
+                @click="isOpenBrand=!isOpenBrand"
+                class="flex justify-between items-center w-full p-2 cursor-pointer mb-4"
               >
-                <path
-                  fill-rule="evenodd"
-                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </div>
-          </div>
-          
-          <!--price-->
-          <div>
-            <div
-              @click="show=!show"
-              class="flex justify-between items-center w-full mb-4 cursor-pointer"
-            >
-              <div class="flex justify-center items-center">
-                <div class="flex w-5 h-5 bg-gray-200 rounded-full relative">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5 stroke-slate-800 absolute -bottom-1.5 -left-1"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
-                    />
-                  </svg>
+                <div class="flex justify-center items-center">
+                  <div class="flex w-5 h-5 bg-gray-200 rounded-full relative">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 stroke-slate-800 absolute -bottom-1.5 -left-1"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"
+                      />
+                    </svg>
+                  </div>
+                  <span class="mr-3 text-slate-800 text-lg">برند محصول</span>
                 </div>
-                <span class="mr-3 text-slate-800 text-lg">محدوده قیمت</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  :class="isOpenBrand?'rotate-180':''"
+                  class="h-4 w-4 stroke-slate-700"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
               </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                :class="show?'rotate-180':''"
-                class="h-4 w-4 stroke-slate-800"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                />
-              </svg>
+              <!--ACC #1 Content-->
+              <div class="px-2">
+                <ul x-show="isOpenBrand===true">
+                  <li class="mb-3">
+                    <input
+                      type="checkbox"
+                      class="form-checkbox rounded text-orange-500 focus:ring-orange-500"
+                      name="brand"
+                      id="apple"
+                    />
+                    <label class="mr-2 text-slate-800" for="apple">اپل</label>
+                  </li>
+                  <li class="mb-3">
+                    <input
+                      type="checkbox"
+                      name="samsung"
+                      id="samsung"
+                      class="form-checkbox rounded text-orange-500 focus:ring-orange-500"
+                    />
+                    <label class="mr-2 text-slate-800" for="samsung"
+                      >سامسونگ</label
+                    >
+                  </li>
+                  <li class="mb-3">
+                    <input
+                      type="checkbox"
+                      name="xiaomi"
+                      id="xiaomi"
+                      class="form-checkbox rounded text-orange-500 focus:ring-orange-500"
+                    />
+                    <label class="mr-2 text-slate-800" for="xiaomi"
+                      >شیائومی</label
+                    >
+                  </li>
+                  <li class="mb-3">
+                    <input
+                      type="checkbox"
+                      name="huawei"
+                      id="huawei"
+                      class="form-checkbox rounded text-orange-500 focus:ring-orange-500"
+                    />
+                    <label class="mr-2 text-slate-800" for="huawei"
+                      >هواوی</label
+                    >
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
 
+          <div class="mb-5">
+            <!--ACC No. 2-->
+            <div x-data="{isOpenColor:true}">
+              <!--ACC #2 header-->
+              <div
+                @click="isOpenColor=!isOpenColor"
+                class="flex justify-between items-center w-full p-2 cursor-pointer mb-4"
+              >
+                <div class="flex justify-center items-center">
+                  <div class="flex w-5 h-5 bg-gray-200 rounded-full relative">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 stroke-slate-800 absolute -bottom-1.5 -left-1"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
+                      />
+                    </svg>
+                  </div>
+                  <span class="mr-3 text-slate-800 text-lg">رنگ محصول</span>
+                </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  :class="isOpenColor?'rotate-180':''"
+                  class="h-4 w-4 stroke-slate-700"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <!--ACC #2 Content-->
+              <!-- <div class="px-2">
+                <ul x-show="isOpenBrand===true">
+                  <li class="mb-3">
+                    <input
+                      type="checkbox"
+                      class="form-checkbox rounded"
+                      name="brand"
+                      id="apple"
+                    />
+                    <label class="mr-2 text-slate-800" for="apple">اپل</label>
+                  </li>
+                  <li class="mb-3">
+                    <input
+                      type="checkbox"
+                      name="samsung"
+                      id="samsung"
+                      class="form-checkbox rounded"
+                    />
+                    <label class="mr-2 text-slate-800" for="samsung"
+                      >سامسونگ</label
+                    >
+                  </li>
+                  <li class="mb-3">
+                    <input
+                      type="checkbox"
+                      name="xiaomi"
+                      id="xiaomi"
+                      class="form-checkbox rounded"
+                    />
+                    <label class="mr-2 text-slate-800" for="xiaomi"
+                      >شیائومی</label
+                    >
+                  </li>
+                  <li class="mb-3">
+                    <input
+                      type="checkbox"
+                      name="huawei"
+                      id="huawei"
+                      class="form-checkbox rounded"
+                    />
+                    <label class="mr-2 text-slate-800" for="huawei"
+                      >هواوی</label
+                    >
+                  </li>
+                </ul>
+              </div> -->
+            </div>
+          </div>
+
+          <div class="mb-5">
+            <!--ACC No. 3-->
+            <div x-data="{isOpenPrice:true}">
+              <!--ACC #3 header-->
+              <div
+                @click="isOpenPrice=!isOpenPrice"
+                class="flex justify-between items-center w-full p-2 cursor-pointer mb-4"
+              >
+                <div class="flex justify-center items-center">
+                  <div class="flex w-5 h-5 bg-gray-200 rounded-full relative">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 stroke-slate-800 absolute -bottom-1.5 -left-1"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
+                      />
+                    </svg>
+                  </div>
+                  <span class="mr-3 text-slate-800 text-lg">محدوده قیمت</span>
+                </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  :class="isOpenPrice?'rotate-180':''"
+                  class="h-4 w-4 stroke-slate-700"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <!--ACC #3 Content-->
+              <!-- <div class="px-2">
+                <ul x-show="isOpenBrand===true">
+                  <li class="mb-3">
+                    <input
+                      type="checkbox"
+                      class="form-checkbox rounded"
+                      name="brand"
+                      id="apple"
+                    />
+                    <label class="mr-2 text-slate-800" for="apple">اپل</label>
+                  </li>
+                  <li class="mb-3">
+                    <input
+                      type="checkbox"
+                      name="samsung"
+                      id="samsung"
+                      class="form-checkbox rounded"
+                    />
+                    <label class="mr-2 text-slate-800" for="samsung"
+                      >سامسونگ</label
+                    >
+                  </li>
+                  <li class="mb-3">
+                    <input
+                      type="checkbox"
+                      name="xiaomi"
+                      id="xiaomi"
+                      class="form-checkbox rounded"
+                    />
+                    <label class="mr-2 text-slate-800" for="xiaomi"
+                      >شیائومی</label
+                    >
+                  </li>
+                  <li class="mb-3">
+                    <input
+                      type="checkbox"
+                      name="huawei"
+                      id="huawei"
+                      class="form-checkbox rounded"
+                    />
+                    <label class="mr-2 text-slate-800" for="huawei"
+                      >هواوی</label
+                    >
+                  </li>
+                </ul>
+              </div> -->
+            </div>
+          </div>
         </div>
       </div>
 
