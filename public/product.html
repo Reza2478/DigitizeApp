@@ -133,7 +133,7 @@
         class="col-span-4 row-span-2 hidden md:block lg:col-span-3 xl:col-span-2"
       >
         <div
-          class="sticky top-28 max-h-[calc(100vh_-_140px)] overflow-auto rounded-xl bg-red-300 p-5"
+          class="sticky top-28 max-h-[calc(100vh_-_140px)] overflow-auto rounded-xl p-5"
         >
           <!--categories-->
           <div class="mb-7">
@@ -223,11 +223,9 @@
       </div>
 
       <!--breadcrumbs section-->
-      <div
-        class="col-span-12 bg-blue-300 md:col-span-8 lg:col-span-9 xl:col-span-10"
-      >
+      <div class="col-span-12 md:col-span-8 lg:col-span-9 xl:col-span-10">
         <div class="mb-6 flex items-center px-4">
-          <span class="text-sm text-orange-400">تلفن همراه</span>
+          <span class="cursor-pointer text-sm text-orange-400">تلفن همراه</span>
           <span
             ><svg
               xmlns="http://www.w3.org/2000/svg"
@@ -241,7 +239,7 @@
                 clip-rule="evenodd"
               /></svg
           ></span>
-          <span class="text-sm text-orange-400">برند آیفون</span>
+          <span class="cursor-pointer text-sm text-orange-400">برند آیفون</span>
           <span
             ><svg
               xmlns="http://www.w3.org/2000/svg"
@@ -255,7 +253,7 @@
                 clip-rule="evenodd"
               /></svg
           ></span>
-          <span class="text-sm text-slate-800">آیفون سیزده</span>
+          <span class="cursor-pointer text-sm text-slate-800">آیفون سیزده</span>
         </div>
       </div>
 
@@ -263,7 +261,7 @@
       <div class="col-span-12 md:col-span-8 lg:col-span-9 xl:col-span-10">
         <div class="grid grid-cols-8 md:grid-rows-[55px_minmax(500px,_1fr)]">
           <div
-            class="col-span-8 flex flex-col bg-blue-300 md:col-span-6 md:flex-auto md:flex-row"
+            class="col-span-8 mb-10 flex flex-col md:col-span-5 md:flex-auto md:flex-row"
           >
             <!--product image-->
             <div
@@ -278,9 +276,7 @@
                 src="../assets/img/Single Product/Gallery.png"
               />
             </div>
-            <div
-              class="flex flex-col bg-red-200 md:w-3/5 md:items-start md:justify-start"
-            >
+            <div class="flex flex-col md:w-3/5 md:items-start md:justify-start">
               <!--product title-->
               <div
                 class="mb-9 flex flex-col items-center justify-center md:items-start md:justify-start"
@@ -295,7 +291,7 @@
 
               <!--color Section-->
               <div
-                class="mb-5 flex w-full items-center justify-evenly md:justify-start"
+                class="mb-8 flex w-full items-center justify-evenly md:justify-start"
               >
                 <span class="text-slate-800">انتخاب رنگ :</span>
                 <div x-data="{color:'green'}" class="flex justify-between p-2">
@@ -411,9 +407,9 @@
 
               <!--seller detail-->
               <div
-                class="col-span-8 mb-5 flex flex-wrap gap-x-2 gap-y-3 bg-green-300 px-4 text-xs md:col-span-2 md:hidden"
+                class="col-span-8 mb-8 flex flex-wrap gap-x-2 gap-y-3 px-4 text-xs text-slate-800 md:col-span-2 md:hidden"
               >
-                <div class="flex flex-auto items-center">
+                <div class="flex flex-auto items-center justify-center">
                   <div class="flex items-center">
                     <span
                       class="relative flex h-5 w-5 rounded-full bg-gray-200"
@@ -452,7 +448,7 @@
                   </div>
                   <span class="mr-4 font-thin">دیجی تایز</span>
                 </div>
-                <div class="flex flex-auto items-center">
+                <div class="flex flex-auto items-center justify-center">
                   <div class="flex items-center">
                     <span
                       class="relative flex h-5 w-5 rounded-full bg-gray-200"
@@ -477,7 +473,7 @@
                   </div>
                   <span class="mr-4 font-thin">18 ماهه زرین خدمت</span>
                 </div>
-                <div class="flex w-full items-center justify-center">
+                <div class="flex flex-auto items-center justify-center">
                   <div class="flex items-center">
                     <span
                       class="relative flex h-5 w-5 rounded-full bg-gray-200"
@@ -535,8 +531,8 @@
               </div>
 
               <!--information-->
-              <div class="px-4">
-                <div class="mb-4">ویژگی های کالا :</div>
+              <div class="px-4 text-slate-800">
+                <div class="mb-4 text-xl">ویژگی های کالا :</div>
                 <ul>
                   <li class="mb-2">
                     <div class="flex items-center gap-x-1">
@@ -578,7 +574,7 @@
           </div>
           <!--seller detail-->
           <div
-            class="col-span-8 hidden flex-wrap gap-x-2 gap-y-3 bg-green-300 px-4 text-xs md:col-span-2 md:flex"
+            class="col-span-8 hidden flex-wrap gap-x-2 gap-y-3 px-4 text-sm text-slate-800 md:col-span-3 md:flex"
           >
             <div class="flex flex-auto items-center">
               <div class="flex items-center">
@@ -640,7 +636,7 @@
               </div>
               <span class="mr-4 font-thin">18 ماهه زرین خدمت</span>
             </div>
-            <div class="flex w-full items-center justify-center">
+            <div class="flex w-full items-center">
               <div class="flex items-center">
                 <span class="relative flex h-5 w-5 rounded-full bg-gray-200">
                   <svg
@@ -693,6 +689,70 @@
               </div>
               <span class="mr-4 font-thin">انبار</span>
             </div>
+          </div>
+        </div>
+        <!--Review-->
+        <div class="mb-8 px-4 text-slate-800">
+          <div class="mb-4 text-xl">نقد و بررسی محصول</div>
+          <div>
+            <p class="text-justify text-sm">
+              آیفون ۱۳ از سری پرچمداران ۲۰۲۱ اپل با قابلیت های فراوان است که در
+              تاریخ ۱۴ سپتامبر به صورت رسمی رونمایی شد و پس از گذشت مدتی در
+              تاریخ ۲۴ سپتامبر به بازارهای جهانی راه یافت و توانست بسیاری از
+              طرفداران برند اپل را به خرید متقاعد سازد. طراحی iPhone 13 Pro
+              مشابه سری پیشین با تغییراتی جزئی است که در رنگ های زیبای آبی، مشکی
+              گرافیت، طلایی و نقره ای عرضه شده است...
+            </p>
+          </div>
+          <button class="absolute left-0 px-4 text-orange-500">
+            ادامه مطلب
+          </button>
+        </div>
+        <!--Description-->
+        <div x-data="{selected:2}" class="px-4 text-slate-800">
+          <div class="mb-8 flex items-center justify-center gap-x-3 md:hidden">
+            <button @click="selected=1" class="py-1.5 px-6" :class="selected===1?'rounded-full bg-white shadow-[0_35px_60px_-15px_rgba(0,0,0,1.3)] text-slate-800':'text-gray-300'">طراحی</button>
+            <button @click="selected=2" class="py-1.5 px-6" :class="selected===2?'rounded-full bg-white shadow-[0_35px_60px_-15px_rgba(0,0,0,1.3)] text-slate-800':'text-gray-300'">دوربین</button>
+            <button @click="selected=3" class="py-1.5 px-6" :class="selected===3?'rounded-full bg-white shadow-[0_35px_60px_-15px_rgba(0,0,0,1.3)] text-slate-800':'text-gray-300'">باتری</button>
+          </div>
+          <div>
+            <p x-show="selected===1" class="text-justify text-sm">
+              کمپانی اپل پس از معرفی سری آیفون ۱۲ بار دیگر طراحی گوشی های خود،
+              با فریم های پهن و زاویه دار را مورد استفاده قرار داد. آیفون ۱۳ پرو
+              نیز به پیروی از نسل پیشین خود با یک طراحی بسیار جذاب رونمایی و
+              عرضه شد. پنل پشتی و نمایشگر این گوشی مانند تمامی گوشی های بالارده
+              با استفاده از شیشه ساخته شده که با یک لایه محافظ پوشیده شده است؛
+              در قسمت پشتی شاهد یک ماژول مربعی شکل هستیم که دوربین اصلی را تشکیل
+              می دهد و به علت طراحی خاصی که دارد این مدل را نسبت به همرده های
+              خود در بین محصولات سایر کمپانی ها متفاوت ساخته است همچنین فریم
+              آلومینیومی در نظر گرفته شده برای آن نیز درخشش خاصی را ایجاد کرده
+              که بی نظیر است. رنگ های بسیار خاص در نظر گرفته شده برای iPhone 13
+              Pro در کنار طراحی منحصر به فرد یک پرچمدار بی همتا را به دنیای
+              تکنولوژی عرضه کرده که نگاه هر بیننده ای را متوجه خود می سازد.
+            </p>
+            <p x-show="selected===2" class="text-justify text-sm">
+              کیفیت بسیار بالای دوربین در گوشی های آیفون همواره در بین کاربران
+              علاقه مند به دنیای تکنولوژی زبانزد بوده است. iPhone 13 Pro نیز با
+              دوربین اصلی چهارگانه خود و بهره مندی از قابلیت سینماتیک توانسته
+              است بسیار محبوب واقع شود. دوربین اصلی در نظر گرفته شده برای این
+              مدل به ترتیب از یک لنز عریض ۱۲ مگاپیکسلی با دریچه دیافراگم f/1.5،
+              لنز تله فوتو ۱۲ مگاپیکسلی با دریچه دیافراگم f/2.8، لنز ۱۲
+              مگاپیکسلی فوق عریض با دریچه دیافراگم f/1.8 و یک سنسور TOF 3D LiDAR
+              تشکیل شده است که قابلیت های ویژه ای را به آیفون ۱۳ پرو بخشیده اند.
+              در قسمت جلو نیز درون ناچ تعبیه شده در بالای نمایشگر یک لنز ۱۲
+              مگاپیکسلی عریض و یک سنسور عمق و تشخیص چهره از نوع SL 3D تعبیه شده
+              که امکانات منحصر به فردی را در هنگام عکس برداری و فیلم برداری در
+              اختیار کاربر قرار می دهد.
+            </p>
+            <p x-show="selected===3" class="text-justify text-sm">
+              در بین هواداران گوشی های آیفون همیشه دغدغه باتری و ظرفیت پایین آن
+              وجود داشته است. آیفون ۱۳ پرو با باتری قدرتمند 3095 میلی آمپری
+              توانسته است دغدغه های کاربران را به خوبی رفع کند. این گوشی دارای
+              قابلیت شارژ سریع ۲۳ وات است که این اطمینان را به کاربر می دهد که
+              انرژی دستگاه را در کوتاه ترین زمان ممکن مجددا بازیابی خواهد شد.
+              البته قابلیت شارژ بی سیم ۱۵ وات با استفاده از مگ سیف نیز از دیگر
+              ویژگی های iPhone 13 Pro محسوب می شوند.
+            </p>
           </div>
         </div>
       </div>
